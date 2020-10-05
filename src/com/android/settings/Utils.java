@@ -1186,4 +1186,40 @@ public final class Utils extends com.android.settingslib.Utils {
         }
         return input;
     }
+
+    public static int getPINPasswordLength(LockPatternUtils lockPatternUtils, int userId) {
+        int pinLength = 0;
+        try {
+            pinLength = (int) lockPatternUtils.getLockSettings().getLong(PIN_PASSWORD_LENGTH, 0, userId);
+        } catch (Exception e) {
+            Log.d("getPINPasswordLength", "getLong error: " + e.getMessage());
+        }
+        if (pinLength >= 4) {
+            return pinLength;
+        }
+        return 0;
+    }
+
+    public static void savePINPasswordLength(LockPatternUtils lockPatternUtils, int length, int userId) {
+        try {
+            lockPatternUtils.getLockSettings().setLong(PIN_PASSWORD_LENGTH, (long) length, userId);
+        } catch (Exception e) {
+            Log.d("savePINPasswordLength", "saveLong error: " + e.getMessage());
+        }
+    }
+
+    public static boolean isFaceDisabledByAdmin(Context context) {
+        DevicePolicyManager devicePolicyManager = (DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+        try {
+            if (devicePolicyManager.getPasswordQuality(null) > DevicePolicyManager.PASSWORD_QUALITY_MANAGED) {
+                return true;
+            }
+        } catch (SecurityException e) {
+            Log.e("Settings", "isFaceDisabledByAdmin error:", e);
+        }
+        if ((devicePolicyManager.getKeyguardDisabledFeatures(null) & DevicePolicyManager.KEYGUARD_DISABLE_FACE) != 0) {
+            return true;
+        }
+        return false;
+    }
 }
