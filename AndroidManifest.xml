@@ -3435,10 +3435,9 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.sound.MediaControlsSettings" />
-        </activity>
-
+          </activity>
         <receiver
-            android:name=".media.BluetoothPairingReceiver"
+          android:name=".media.BluetoothPairingReceiver"
             android:exported="true"
             android:permission="android.permission.BLUETOOTH_ADMIN">
             <intent-filter>
@@ -3466,8 +3465,34 @@
                 <action android:name="com.android.settings.intent.action.FACE_ENROLL"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+          </activity>
+          <!--Polar settings-->    
+        <activity android:name=".Settings$PolarSettingsActivity"
+            android:label="@string/polar_settings_dash_title"
+            android:icon="@drawable/ic_homepage_polarsettings"
+            android:taskAffinity="">
+            <intent-filter android:priority="1">
+                <action android:name="com.polar.settings.PolarSettings" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.VOICE_LAUNCH" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <intent-filter android:priority="-3">
+                <action android:name="com.android.settings.action.SETTINGS" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.homepage" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.polar.settings.PolarSettings" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+            <meta-data android:name="com.android.settings.summary"
+                android:resource="@string/polar_settings_summary"/>
         </activity>
-
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>

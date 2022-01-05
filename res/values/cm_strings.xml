@@ -196,6 +196,8 @@
     <string name="face_redo_warning_msg">Do you want to remove the existing face scan and create a new one?</string>
     <!-- Battery stats reset -->
     <string name="battery_stats_reset">Reset statistics</string>
-    <string name="battery_stats_message">This will reset battery history and statistics. Would you like to continue?</string>
-
+    <string name="battery_stats_message">This will reset battery history statistics. Would you like to continue?</string>
+    <!-- Polar customization settings integration -->
+    <string name="polar_settings_dash_title">Polar settings</string>
+    <string name="polar_settings_summary">Feels like winter</string>  
 </resources>

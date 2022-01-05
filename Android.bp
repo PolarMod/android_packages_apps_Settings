@@ -27,7 +27,14 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: ["src/**/*.java",
+           "PolarSettings/src/**/*.java"],
+
+    aaptflags: ["--extra-packages com.polar.settings"],
+
+    resource_dirs: ["res",
+                    "PolarSettings/res"
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -59,6 +66,10 @@ android_library {
         "vendor.lineage.fastcharge-V1.0-java",
         "faceunlock_framework",
     ],
+   
+    optimize: {
+        proguard_flags_files: ["proguard-core.flags"],
+    },
 
     libs: [
         "telephony-common",
