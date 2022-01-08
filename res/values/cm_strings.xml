@@ -190,6 +190,6 @@
     <string name="battery_stats_reset">Reset statistics</string>
     <string name="battery_stats_message">This will reset battery history statistics. Would you like to continue?</string>
     <!-- Polar customization settings integration -->
-    <string name="polar_settings_dash_title">Polar settings</string>
-    <string name="polar_settings_summary">Feels like winter</string>  
+    <string name="polar_settings_dash_title">Additional settings</string>
+    <string name="polar_settings_summary">Traffic indicator, weather, themes</string>  
 </resources>
