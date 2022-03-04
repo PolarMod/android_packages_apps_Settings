@@ -20,8 +20,6 @@ import android.content.Context;
 import android.hardware.face.FaceManager;
 import android.hardware.fingerprint.FingerprintManager;
 
-import android.util.Log;
-
 import com.android.settings.R;
 import com.android.settings.Utils;
 import com.android.settings.core.BasePreferenceController;
@@ -29,7 +27,7 @@ import com.android.settings.core.BasePreferenceController;
 import com.android.settings.custom.biometrics.FaceUtils;
 
 public class TopLevelSecurityEntryPreferenceController extends BasePreferenceController {
-    private final static String TAG = "Settings.Security.TopLevelSecurityEntryPreferenceController";
+
     public TopLevelSecurityEntryPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
     }
@@ -45,11 +43,6 @@ public class TopLevelSecurityEntryPreferenceController extends BasePreferenceCon
                 Utils.getFingerprintManagerOrNull(mContext);
         final FaceManager faceManager =
                 Utils.getFaceManagerOrNull(mContext);
-        if (FaceUtils.isFaceUnlockSupported()){
-            Log.d(TAG, "Face unlock supported!");
-        } else {
-            Log.d(TAG, "Face unlock is not supported!");
-        }
         if (fpm != null && fpm.isHardwareDetected() && FaceUtils.isFaceUnlockSupported()) {
             return mContext.getText(R.string.security_dashboard_summary_face_and_fingerprint);
         } else if (fpm != null && fpm.isHardwareDetected()) {
