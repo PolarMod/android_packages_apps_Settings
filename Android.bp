@@ -85,9 +85,6 @@ android_library {
         "vendor.lineage.fastcharge-V1.0-java",
     ],
    
-    optimize: {
-        proguard_flags_files: ["proguard-core.flags"],
-    },
 
     libs: [
         "telephony-common",
