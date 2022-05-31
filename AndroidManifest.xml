@@ -4188,10 +4188,7 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                        android:value="com.android.settings.sound.MediaControlsSettings" />
-            <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
-                       android:value="@string/menu_key_sound"/>
-        </activity>
-        
+          </activity>
         <receiver
           android:name=".media.BluetoothPairingReceiver"
             android:exported="true"

@@ -86,6 +86,9 @@ android_library {
         "SystemUISharedLib",
     ],
    
+    optimize: {
+        proguard_flags_files: ["proguard-core.flags"],
+    },
 
     libs: [
         "telephony-common",
