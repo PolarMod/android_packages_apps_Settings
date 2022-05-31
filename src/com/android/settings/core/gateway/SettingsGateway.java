@@ -326,7 +326,7 @@ public class SettingsGateway {
             NetworkProviderSettings.class.getName(),
             NetworkSelectSettings.class.getName(),
             AlarmsAndRemindersDetails.class.getName(),
-            MediaManagementAppsDetails.class.getName(),
+            MediaManagementAppsDetails.class.getName()
             PolarSettings.class.getName()
     };
 
