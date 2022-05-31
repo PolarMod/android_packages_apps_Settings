@@ -63,7 +63,4 @@
     <string name="theme_customization_font_title">Шрифт</string>
     <string name="wake_when_plugged_or_unplugged_title">Екран прокидається при підключені</string>
     <string name="wake_when_plugged_or_unplugged_summary">Екран прокидається при підключені до зарядного пристрою</string>
-    <string name="peak_refresh_rate_summary_custom">Автоматично збільшує частоту оновлення певного вмісту з 60 до %1$d Гц. Підвищує використання заряду акумулятора.</string>
-    <string name="polar_settings_dash_title">Налаштування PolarMod</string>
-    <string name="polar_settings_summary">Індікатор трафіку,погода,теми</string>   
 </resources>
