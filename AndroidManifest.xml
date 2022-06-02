@@ -4191,7 +4191,7 @@
             <meta-data android:name="com.android.settings.HIGHLIGHT_MENU_KEY"
                        android:value="@string/menu_key_sound"/>
         </activity>
-
+        
         <receiver
             android:name=".media.BluetoothPairingReceiver"
             android:exported="true"
@@ -4286,6 +4286,21 @@
             </intent-filter>
         </activity>
 
+        <!-- PolarSettings -->
+        <activity android:name=".Settings$PolarSettingsActivity"
+            android:exported="true"
+            android:label="@string/polar_settings_dash_title"
+            android:icon="@drawable/ic_homepage_gear"
+            android:parentActivityName="com.android.settings">
+            <intent-filter android:priority="69">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.android.settings.SHORTCUT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.polara.settings.PolarSettings" />
+        </activity>
+
+  
         <!-- This is the longest AndroidManifest.xml ever. -->
     </application>
 </manifest>
