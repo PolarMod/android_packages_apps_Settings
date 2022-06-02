@@ -51,7 +51,7 @@ android_library {
     aaptflags: ["--extra-packages com.polar.settings"],
 
     resource_dirs: ["res",
-                    "SakuraSettings/res"
+                    "PolarSettings/res"
     ],
 
     static_libs: [
