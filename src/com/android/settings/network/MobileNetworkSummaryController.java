@@ -210,6 +210,7 @@ public class MobileNetworkSummaryController extends AbstractPreferenceController
 
     @Override
     public boolean isAvailable() {
+        Log.d(TAG, "isWifiOnly:" + Utils.isWifiOnly(mContext));
         return !Utils.isWifiOnly(mContext) && mUserManager.isAdminUser();
     }
 
