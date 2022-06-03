@@ -39,14 +39,14 @@
         android:summary="@string/connected_devices_dashboard_default_summary"
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
+    
     <Preference
         android:key="top_level_polar_settings"
         android:title="@string/polar_settings_dash_title"
         android:summary="@string/polar_settings_summary"
         android:icon="@drawable/ic_homepage_gear"
-        android:order="-135"
+        android:order="15"
         android:fragment="com.polar.settings.PolarSettings"/>
-
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
