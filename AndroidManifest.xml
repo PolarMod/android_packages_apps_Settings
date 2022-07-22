@@ -4290,7 +4290,6 @@
         <activity android:name=".Settings$PolarSettingsActivity"
             android:exported="true"
             android:label="@string/polar_settings_dash_title"
-            android:icon="@drawable/ic_homepage_gear"
             android:parentActivityName="com.android.settings">
             <intent-filter android:priority="69">
                 <action android:name="android.intent.action.MAIN" />
