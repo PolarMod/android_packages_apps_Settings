@@ -457,4 +457,7 @@
     <dimen name="chartview_trapezoid_radius">5dp</dimen>
     <dimen name="chartview_trapezoid_margin_start">1dp</dimen>
     <dimen name="chartview_trapezoid_margin_bottom">2dp</dimen>
+
+    <!-- Dashboard foreground image size -->
+    <dimen name="dashboard_tile_foreground_image_size_pers">24dp</dimen>
 </resources>
