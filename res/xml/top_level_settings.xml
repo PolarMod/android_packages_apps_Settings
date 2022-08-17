@@ -44,7 +44,7 @@
         android:key="top_level_polar_settings"
         android:title="@string/polar_settings_dash_title"
         android:summary="@string/polar_settings_summary"
-        android:icon="@drawable/ic_settings_gear_homepage"
+        android:icon="@drawable/ic_homepage_gear"
         android:order="15"
         android:fragment="com.polar.settings.PolarSettings"/>
 
