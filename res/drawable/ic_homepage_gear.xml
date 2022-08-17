@@ -22,9 +22,10 @@
     </item>
 
     <item
-        android:width="@dimen/dashboard_tile_foreground_image_size_pers"
-        android:height="@dimen/dashboard_tile_foreground_image_size_pers"
-        android:gravity="center"
+        android:width="@dimen/dashboard_tile_foreground_image_size"
+        android:height="@dimen/dashboard_tile_foreground_image_size"
+	android:start="@dimen/dashboard_tile_foreground_image_inset"
+        android:top="@dimen/dashboard_tile_foreground_image_inset"
         android:drawable="@drawable/ic_settings_gear_homepage"  
         android:tint="@color/homepage_subicon_bg"/>
 </layer-list>
