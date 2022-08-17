@@ -5761,4 +5761,7 @@
     <string name="bluetooth_connect_access_dialog_content" msgid="4336436466468405850">"Пристрій \"<xliff:g id="DEVICE_NAME_0">%1$s</xliff:g>\" хоче підключитися до цього телефона.\n\nВи ще не підключалися до пристрою \"<xliff:g id="DEVICE_NAME_1">%2$s</xliff:g>\"."</string>
     <string name="bluetooth_connect_access_dialog_negative" msgid="4944672755226375059">"Не підключатися"</string>
     <string name="bluetooth_connect_access_dialog_positive" msgid="3630561675207269710">"Підключитися"</string>
+    <!-- Game Space -->
+    <string name="game_space_title">Ігровий простір</string>
+    <string name="game_space_summary">Покращте свій ігровий досвід</string>
 </resources>
