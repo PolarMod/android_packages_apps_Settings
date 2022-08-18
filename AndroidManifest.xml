@@ -4289,14 +4289,15 @@
         <!-- PolarSettings -->
         <activity android:name=".Settings$PolarSettingsActivity"
             android:exported="true"
-            android:label="@string/polar_settings_dash_title"
+	    android:label="@string/polar_settings_dash_title"
+	    android:icon="@drawable/ic_homepage_polar_settings"
             android:parentActivityName="com.android.settings">
             <intent-filter android:priority="69">
-                <action android:name="android.intent.action.MAIN" />
+                <action   android:name="android.intent.action.MAIN" />
                 <category android:name="com.android.settings.SHORTCUT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
-                android:value="com.polara.settings.PolarSettings" />
+                       android:value="com.polar.settings.PolarSettings" />
         </activity>
 
   
