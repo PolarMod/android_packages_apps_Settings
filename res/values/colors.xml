@@ -91,6 +91,7 @@
     <color name="homepage_privacy_background">#5E97F6</color>
     <color name="homepage_wallpaper_background">#E51AD1</color>
     <color name="homepage_notification_background">#DD4C9D</color>
+    <color name="homepage_polar_background">@android:color/system_accent1_300</color>
     <color name="homepage_superior_background">#3350b9</color>
 
     <color name="contextual_card_dismissal_background">@*android:color/material_grey_100</color>
