@@ -25,6 +25,7 @@ import com.android.settings.notification.EmergencyBroadcastPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
+import com.android.settingslib.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,7 +62,11 @@ public class EmergencyDashboardFragment extends DashboardFragment {
 
     private static List<AbstractPreferenceController> buildPreferenceControllers(Context context) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        controllers.add(new EmergencyBroadcastPreferenceController(context, WEA_PREF_KEY));
+        if(!Utils.isWifiOnly(context)){
+	   controllers.add(new EmergencyBroadcastPreferenceController(context, WEA_PREF_KEY));
+	} else {
+           Log.d(TAG, "Not adding emergency preferences controller as device is WiFi only");
+	}
         return controllers;
     }
 
