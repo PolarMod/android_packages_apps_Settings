@@ -18,6 +18,7 @@ package com.android.settings.emergency;
 
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.util.Log;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
