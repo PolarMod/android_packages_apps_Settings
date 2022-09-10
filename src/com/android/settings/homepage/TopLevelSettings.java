@@ -137,6 +137,11 @@ public class TopLevelSettings extends DashboardFragment implements
         if (mHighlightMixin == null) {
             mHighlightMixin = new TopLevelHighlightMixin();
         }
+        if (com.android.settingslib.Utils.isWifiOnly(getContext())){
+            PreferenceScreen screen = getPreferenceScreen();
+	    Preference emergencyPreference = (Preference) findPreference("top_level_emergency");	
+	    screen.removePreference(emergencyPreference);
+	}
     }
 
     @Override
