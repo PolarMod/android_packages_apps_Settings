@@ -180,6 +180,10 @@ public class NetworkProviderCallsSmsController extends AbstractPreferenceControl
 
         final List<SubscriptionInfo> subs = SubscriptionUtil.getActiveSubscriptions(
                 mSubscriptionManager);
+	if (com.android.settingslib.Utils.isWifiOnly(mContext)){
+            mPreference.setVisible(false);
+	    return;
+	}
         if (subs.isEmpty()) {
             mPreference.setEnabled(false);
         } else {
