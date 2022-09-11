@@ -47,6 +47,10 @@ import com.android.settingslib.core.instrumentation.Instrumentable;
 import com.android.settingslib.drawer.Tile;
 import com.android.settingslib.search.SearchIndexable;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 @SearchIndexable(forTarget = MOBILE)
 public class TopLevelSettings extends DashboardFragment implements
         PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
@@ -268,5 +272,14 @@ public class TopLevelSettings extends DashboardFragment implements
                     // Never searchable, all entries in this page are already indexed elsewhere.
                     return false;
                 }
+
+		@Override 
+		public List<String> getNonIndexableKeys(Context context){
+			List<String> keys = super.getNonIndexableKeys(context);
+			if(com.android.settingslib.Utils.isWifiOnly(context)){
+				keys.add("top_level_emergency");
+			}
+			return keys;
+		}
             };
 }
