@@ -23,6 +23,9 @@
     public void *(android.view.MenuItem);
 }
 
+# Keep custom settings
+-keep class com.polar.settings.**
+
 # Keep setters in Views so that animations can still work.
 -keep public class * extends android.view.View {
     public <init>(android.content.Context);

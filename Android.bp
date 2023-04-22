@@ -53,7 +53,16 @@ android_library {
         "SettingsLib-search-defaults",
     ],
 
-    srcs: ["src/**/*.java", "src/**/*.kt"],
+    srcs: ["src/**/*.java",
+           "src/**/*.kt",
+           "PolarSettings/src/**/*.java",
+    ],
+
+    aaptflags: ["--extra-packages com.polar.settings"],
+
+    resource_dirs: ["res",
+                    "PolarSettings/res"
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
